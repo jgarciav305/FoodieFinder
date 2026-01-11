@@ -1,10 +1,10 @@
-# 🍽️ FoodieFinder
+# FoodieFinder
 
 FoodieFinder is a Django-based web application designed to help users discover, explore, and manage food-related content in one place. It provides a simple interface for browsing food options, viewing details, and organizing information in a user-friendly way.
 
 This project was built as a learning-focused full-stack web application using Python and Django, with an emphasis on clean architecture, database integration, and maintainable code.
 
-## 🚀 Features
+## Features
 
 - Browse and explore food-related listings  
 - View detailed pages for individual food items or locations  
@@ -12,14 +12,14 @@ This project was built as a learning-focused full-stack web application using Py
 - Database-backed models using SQLite  
 - Modular Django app structure  
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend:** Python, Django  
 - **Frontend:** HTML, CSS  
 - **Database:** SQLite  
 - **Version Control:** Git & GitHub  
 
-## 📦 Installation & Setup
+## Installation & Setup
 
 ### 1. Clone the repository
 ```bash
@@ -64,9 +64,9 @@ python manage.py runserver
 ```
 
 Then open:  
-👉 http://127.0.0.1:8000/
+http://127.0.0.1:8000/
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 FoodieFinder/
