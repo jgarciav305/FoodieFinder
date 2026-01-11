@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="container" style="padding-top: 120px;">
+    <h2 class="text-center mb-4">Customer List</h2>
+    
+    <!-- New Customer Button -->
+    <div class="text-center mb-4">
+        <a class="btn btn-primary mb-3" href="{% url 'addCustomer' %}">New Customer</a>
+    </div>
+
+    <!-- Customer Cards -->
+    <div class="row">
+        {% for customer in cust %}
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm p-3" style="background-color: white; color: black;">
+                    
+                    <!-- Buttons for Edit, Delete, Add Favorite -->
+                    <div class="mb-2">
+                        <a class="btn btn-danger btn-sm me-2" href="{% url 'deleteCustomer' cust_id=customer.id %}">Delete</a>
+                        <a class="btn btn-primary btn-sm me-2" href="{% url 'showSingleCustomer' cust_id=customer.id %}">Edit</a>
+                        <a class="btn btn-success btn-sm" href="{% url 'addFavoriteRestaurant' cust_id=customer.id %}">Add Favorite</a>
+                    </div>
+
+                    <!-- Customer Info -->
+                    <h5>{{ customer.first_name }} {{ customer.last_name }}</h5>
+                    <p><strong>Username:</strong> {{ customer.username }}</p>
+                    <p><strong>Email:</strong> {{ customer.email }}</p>
+
+                    <!-- Favorite Restaurants -->
+                    {% if customer.favorites.all %}
+                        <p><strong>Favorites:</strong></p>
+                        <ul>
+                            {% for fav in customer.favorites.all %}
+                                <li>{{ fav.name }} ({{ fav.city }})</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

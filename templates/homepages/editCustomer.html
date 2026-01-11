@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="container" style="padding-top: 120px;">
+    <h2 class="text-center mb-4">Edit Customer Profile</h2>
+
+    <form method="POST" action="{% url 'updateCust' %}">
+        {% csrf_token %}
+        <input type="hidden" name="cust_id" value="{{ record.id }}">
+
+        <div class="form-group">
+            <label>First Name:</label>
+            <input type="text" name="first_name" class="form-control" value="{{ record.first_name }}">
+        </div>
+
+        <div class="form-group">
+            <label>Last Name:</label>
+            <input type="text" name="last_name" class="form-control" value="{{ record.last_name }}">
+        </div>
+
+        <div class="form-group">
+            <label>Username:</label>
+            <input type="text" name="username" class="form-control" value="{{ record.username }}">
+        </div>
+
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="email" name="email" class="form-control" value="{{ record.email }}">
+        </div>
+
+        {% if favorites %}
+        <div class="form-group">
+            <label>Favorites:</label>
+            <ul>
+                {% for fav in favorites %}
+                    <li>{{ fav.name }} ({{ fav.city }})</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+    </form>
+</section>
+{% endblock %}

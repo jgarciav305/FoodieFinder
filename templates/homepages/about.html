@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body_class %}about-page{% endblock %}
+
+{% block content %}
+
+<section class="about-band">
+  <div class="container text-center mb-5">
+    <h2 class="section-heading">About FoodieFinder</h2>
+    <p class="hero-subtext">Your ultimate guide to discovering the best places to eat!</p>
+  </div>
+
+  <!-- Band 1 -->
+  <div class="band">
+    <div class="band-content">
+      <div class="band-text">
+        <h2>Discover Local Gems</h2>
+        <p>Whether you're searching for hidden food gems, local favorites, or trending restaurants, FoodieFinder makes it easy to find the perfect meal.</p>
+      </div>
+      <div class="band-image">
+        <!-- Restaurant picture was taken by Jimmy Elizarraras from pexels.com -->
+        <img src="{% static 'img/about/restaurant.jpg' %}" alt="Restaurant Image">
+      </div>
+    </div>
+  </div>
+
+  <!-- Band 2 -->
+  <div class="band">
+    <div class="band-content reverse">
+      <div class="band-text">
+        <h2>Curated Menus & Reviews</h2>
+        <p>Browse detailed restaurant menus and honest customer reviews to make informed dining choices before you go.</p>
+      </div>
+      <div class="band-image">
+        <!-- Food-Menu picture was taken by Roman Odintsov from pexels.com -->
+        <img src="{% static 'img/about/food-menu.jpg' %}" alt="Menu Image">
+      </div>
+    </div>
+  </div>
+
+  <!-- Band 3 -->
+  <div class="band">
+    <div class="band-content">
+      <div class="band-text">
+        <h2>Support Local Businesses</h2>
+        <p>We help connect food lovers with small businesses and restaurants, giving local chefs and owners the recognition they deserve.</p>
+      </div>
+      <div class="band-image">
+        <!-- Chef picture was taken by Anna Tarazevich from pexels.com -->
+        <img src="{% static 'img/about/chef.jpg' %}" alt="Chef Image">
+      </div>
+    </div>
+  </div>
+
+  <!-- Band 4 -->
+  <div class="band">
+    <div class="band-content reverse">
+      <div class="band-text">
+        <h2>Easy Reservations & Directions</h2>
+        <p>Find a restaurant you love? Book a reservation or get directions instantly—no hassle, just great food!</p>
+      </div>
+      <div class="band-image">
+        <!-- Reservation picture was taken by Pete Wales from pexels.com -->
+        <img src="{% static 'img/about/reservation.jpg' %}" alt="Reservation Image">
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

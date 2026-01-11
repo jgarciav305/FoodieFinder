@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container" style="padding-top: 120px;">
+  <h2 class="text-center mb-4">Add Favorite Restaurant for {{ customer.first_name }} {{ customer.last_name }}</h2>
+
+  <form method="POST">
+    {% csrf_token %}
+    <label for="restaurant">Select a Restaurant:</label>
+    <select name="restaurant" id="restaurant" class="form-control">
+      {% for rest in restaurants %}
+        <option value="{{ rest.id }}">{{ rest.name }} ({{ rest.city }})</option>
+      {% endfor %}
+    </select>
+    <br>
+    <button type="submit" class="btn btn-success">Add to Favorites</button>
+  </form>
+</div>
+{% endblock %}

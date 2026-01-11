@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">Choose a city:</div>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'newyork'%}">New York City</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'chicago'%}">Chicago</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'langeles'%}">Los Angeles</a>
+                <br>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'austin'%}">Austin</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'norleans'%}">New Orleans</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'sfrisco'%}">San Francisco</a>
+            </div>
+        </header>
+{% endblock %}

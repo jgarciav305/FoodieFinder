@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container" style="padding-top: 120px;"> <!-- Added padding because my heading is fixed -->
+        <h1>Welcome to {{city}}</h1>
+        <img src="{{image.url}}" width="600"/>
+    </div>        
+{% endblock %}
